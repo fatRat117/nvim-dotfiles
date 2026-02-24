@@ -14,6 +14,8 @@ require("lazy").setup({
 
 	require("plugins.bufferline"),
 
+	require("plugins.colorful-menu"),
+
 	require("plugins.gitsigns"),
 
 	require("plugins.which-key"),
