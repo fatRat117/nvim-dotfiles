@@ -16,6 +16,8 @@ require("lazy").setup({
 
 	require("plugins.colorful-menu"),
 
+  require("plugins.wakatime"),
+
 	require("plugins.gitsigns"),
 
 	require("plugins.which-key"),
