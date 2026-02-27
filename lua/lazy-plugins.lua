@@ -5,6 +5,12 @@ require("lazy").setup({
 
 	"rebelot/kanagawa.nvim",
 	"ellisonleao/gruvbox.nvim",
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 
 	require("plugins.bufferin"),
 
@@ -16,7 +22,7 @@ require("lazy").setup({
 
 	require("plugins.colorful-menu"),
 
-  require("plugins.wakatime"),
+	require("plugins.wakatime"),
 
 	require("plugins.gitsigns"),
 
