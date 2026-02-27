@@ -30,24 +30,6 @@ return {
 				mappings = {
 					["space"] = "none",
 				},
-				["B"] = {
-					function()
-						vim.api.nvim_command("Neotree focus buffers left")
-					end,
-					desc = "Switch to Buffers",
-				},
-				["G"] = {
-					function()
-						vim.api.nvim_command("Neotree focus git_status left")
-					end,
-					desc = "Switch to Git Status",
-				},
-				["F"] = {
-					function()
-						vim.api.nvim_command("Neotree focus filesystem left")
-					end,
-					desc = "Switch to Filesystem",
-				},
 			},
 			filesystem = {
 				filtered_items = {
@@ -60,7 +42,7 @@ return {
 		})
 	end,
 	keys = {
-		{ "<leader>ee", ":Neotree toggle<CR>", desc = "Toggle NeoTree", silent = true },
+		{ "<leader>e", ":Neotree toggle<CR>", desc = "Toggle NeoTree", silent = true },
 	},
 	-- opts = {
 	-- 	filesystem = {
