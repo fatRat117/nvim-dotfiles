@@ -7,9 +7,13 @@ require("lazy").setup({
 	"ellisonleao/gruvbox.nvim",
 	{
 		"craftzdog/solarized-osaka.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
-		opts = {},
+		opts = function()
+			return {
+				transparent = true,
+			}
+		end,
 	},
 
 	require("plugins.bufferin"),
@@ -31,6 +35,8 @@ require("lazy").setup({
 	require("plugins.telescope"),
 
 	require("plugins.lspconfig"),
+
+	require("plugins.lspsaga"),
 
 	require("plugins.conform"),
 
