@@ -58,6 +58,13 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
+opt.list = true
+opt.listchars = {
+	tab = "▏ ", -- 将 Tab 显示为细长线，后面跟一个空格
+	trail = "·", -- 将行尾多余的空格显示为一个小点
+	extends = "»",
+	precedes = "«",
+}
 -- split windows
 opt.splitright = true -- split vertical window to right
 opt.splitbelow = true -- split horizontal window to bottom
