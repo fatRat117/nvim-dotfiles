@@ -16,36 +16,51 @@ require("lazy").setup({
 		end,
 	},
 
+	-- Leader + B open the list of buffers
 	require("plugins.bufferin"),
 
+	-- beautiful ui
 	require("plugins.noice"),
 
+	-- dashboard
 	require("plugins.alpha"),
 
+	-- buffer line
 	require("plugins.bufferline"),
 
+	-- beauty
 	require("plugins.colorful-menu"),
 
+	-- trace my time
 	require("plugins.wakatime"),
 
+	-- git signs
 	require("plugins.gitsigns"),
 
+	-- key helper
 	require("plugins.which-key"),
 
+	-- find file
 	require("plugins.telescope"),
 
+	-- lsp config
 	require("plugins.lspconfig"),
 
+	-- make my lsp better
 	require("plugins.lspsaga"),
 
+	-- format
 	require("plugins.conform"),
 
+	-- completion
 	require("plugins.blink-cmp"),
 
 	--   require 'kickstart.plugins.todo-comments',
 
+	-- common tools
 	require("plugins.mini"),
 
+	-- appearence
 	require("plugins.treesitter"),
 
 	-- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
@@ -60,7 +75,7 @@ require("lazy").setup({
 	-- require 'kickstart.plugins.debug',
 	require("plugins.indent_line"),
 	-- require 'kickstart.plugins.lint',
-	require("plugins.autopairs"),
+	-- require("plugins.autopairs"),
 	require("plugins.neo-tree"),
 }, {
 	ui = {
