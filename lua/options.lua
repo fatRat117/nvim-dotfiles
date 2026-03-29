@@ -49,6 +49,9 @@ opt.shiftwidth = 4 -- 4 spaces for index width
 opt.expandtab = true -- expand tab to space
 opt.autoindent = true -- copy indent from current line when starting new one
 
+opt.textwidth = 80 -- 超过 80 字符自动换行
+opt.formatoptions:append("a")
+
 opt.wrap = false
 
 -- search settings
