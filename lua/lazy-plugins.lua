@@ -1,102 +1,85 @@
--- NOTE: Here is where you install your plugins.
+-- ============================================================
+-- Plugin Management with lazy.nvim
+-- ============================================================
+
 require("lazy").setup({
-	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-	-- 'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+    -- =========================================================
+    -- Colorschemes
+    -- =========================================================
+    { "rebelot/kanagawa.nvim", lazy = true },
+    { "ellisonleao/gruvbox.nvim", priority = 1000 },
+    {
+        "craftzdog/solarized-osaka.nvim",
+        lazy = true,
+        priority = 1000,
+        opts = { transparent = true },
+    },
 
-	"rebelot/kanagawa.nvim",
-	"ellisonleao/gruvbox.nvim",
-	{
-		"craftzdog/solarized-osaka.nvim",
-		lazy = true,
-		priority = 1000,
-		opts = function()
-			return {
-				transparent = true,
-			}
-		end,
-	},
+    -- =========================================================
+    -- UI Enhancements
+    -- =========================================================
+    require("plugins.alpha"),        -- Dashboard
+    require("plugins.bufferline"),   -- Buffer line
+    require("plugins.noice"),        -- Better UI for messages, cmdline, popupmenu
+    require("plugins.colorful-menu"), -- Colorful completion menu
 
-	-- Leader + B open the list of buffers
-	require("plugins.bufferin"),
+    -- =========================================================
+    -- File Management
+    -- =========================================================
+    require("plugins.neo-tree"),     -- File explorer
+    require("plugins.bufferin"),     -- Buffer list
 
-	-- beautiful ui
-	require("plugins.noice"),
+    -- =========================================================
+    -- Search & Navigation
+    -- =========================================================
+    require("plugins.telescope"),    -- Fuzzy finder
+    require("plugins.which-key"),    -- Keymap helper
 
-	-- dashboard
-	require("plugins.alpha"),
+    -- =========================================================
+    -- LSP & Completion
+    -- =========================================================
+    require("plugins.lspconfig"),    -- LSP configuration
+    require("plugins.lspsaga"),      -- LSP UI enhancements
+    require("plugins.blink-cmp"),    -- Autocompletion
+    require("plugins.conform"),      -- Formatting
 
-	-- buffer line
-	require("plugins.bufferline"),
+    -- =========================================================
+    -- Syntax & Treesitter
+    -- =========================================================
+    require("plugins.treesitter"),   -- Syntax highlighting
+    require("plugins.indent_line"),  -- Indentation guides
 
-	-- beauty
-	require("plugins.colorful-menu"),
+    -- =========================================================
+    -- Git Integration
+    -- =========================================================
+    require("plugins.gitsigns"),     -- Git signs in gutter
 
-	-- trace my time
-	require("plugins.wakatime"),
+    -- =========================================================
+    -- Editor Enhancements
+    -- =========================================================
+    require("plugins.mini"),         -- Collection of small plugins
 
-	-- git signs
-	require("plugins.gitsigns"),
+    -- =========================================================
+    -- Utilities
+    -- =========================================================
+    require("plugins.wakatime"),     -- Time tracking
 
-	-- key helper
-	require("plugins.which-key"),
-
-	-- find file
-	require("plugins.telescope"),
-
-	-- lsp config
-	require("plugins.lspconfig"),
-
-	-- make my lsp better
-	require("plugins.lspsaga"),
-
-	-- format
-	require("plugins.conform"),
-
-	-- completion
-	require("plugins.blink-cmp"),
-
-	--   require 'kickstart.plugins.todo-comments',
-
-	-- common tools
-	require("plugins.mini"),
-
-	-- appearence
-	require("plugins.treesitter"),
-
-	-- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
-	-- init.lua. If you want these files, they are in the repository, so you can just download them and
-	-- place them in the correct locations.
-
-	-- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
-	--
-	--  Here are some example plugins that I've included in the Kickstart repository.
-	--  Uncomment any of the lines below to enable them (you will need to restart nvim).
-	--
-	-- require 'kickstart.plugins.debug',
-	require("plugins.indent_line"),
-	-- require 'kickstart.plugins.lint',
-	-- require("plugins.autopairs"),
-	require("plugins.neo-tree"),
 }, {
-	ui = {
-		-- If you are using a Nerd Font: set icons to an empty table which will use the
-		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-		icons = vim.g.have_nerd_font and {} or {
-			cmd = "⌘",
-			config = "🛠",
-			event = "📅",
-			ft = "📂",
-			init = "⚙",
-			keys = "🗝",
-			plugin = "🔌",
-			runtime = "💻",
-			require = "🌙",
-			source = "📄",
-			start = "🚀",
-			task = "📌",
-			lazy = "💤 ",
-		},
-	},
+    ui = {
+        icons = vim.g.have_nerd_font and {} or {
+            cmd = "⌘",
+            config = "🛠",
+            event = "📅",
+            ft = "📂",
+            init = "⚙",
+            keys = "🗝",
+            plugin = "🔌",
+            runtime = "💻",
+            require = "🌙",
+            source = "📄",
+            start = "🚀",
+            task = "📌",
+            lazy = "💤 ",
+        },
+    },
 })
-
--- vim: ts=2 sts=2 sw=2 et

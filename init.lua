@@ -1,20 +1,19 @@
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+-- ============================================================
+-- Neovim Configuration Entry Point
+-- ============================================================
+
+-- Set leader keys BEFORE loading any plugins
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
+-- Feature flags
 vim.g.have_nerd_font = true
 
--- [[ Setting options ]]
+-- Load configuration modules
 require("options")
-
--- [[ Basic Keymaps ]]
 require("keymaps")
-
--- [[ Install `lazy.nvim` plugin manager ]]
 require("lazy-bootstrap")
-
--- [[ Configure and install plugins ]]
 require("lazy-plugins")
 
+-- Set colorscheme
 vim.cmd("colorscheme gruvbox")
