@@ -55,7 +55,6 @@ opt.autoindent = true
 -- Text Formatting
 -- ----------------------------------------------------------------
 opt.textwidth = 80
-opt.formatoptions:append("a")
 
 -- ----------------------------------------------------------------
 -- Search Settings
